@@ -41,9 +41,9 @@
 
 \usepackage{pgf-pie}
 
-\newcommand{\Title}{\begin{frame}[plain]\titlepage\end{frame}}
+\newcommand{\TitleSlide}{\begin{frame}[plain]\titlepage\end{frame}}
 
-\newcommand{\End}{\begin{frame}[plain]\endpage\end{frame}}
+\newcommand{\EndSlide}{\begin{frame}[plain]\endpage\end{frame}}
 
 
 \newcommand{\Section}[1]{\titleimagecolor{red}\section{#1}}
@@ -54,7 +54,7 @@
 
 \begin{document}
 
-\Title
+\TitleSlide
 
 %%%%%%%%%%%%%%%
 
@@ -63,11 +63,36 @@
 \item Professor in Software Engineering
 \item Dept. of Computer Science, Engineering Faculty LTH, Lund University, Sweden
 \item Research focus: Software Requirements Engineering
-\item Scala programmer since 2011 
-\item Teaching Scala first in primary school since 2011
-\item Teaching Scala first at university level since 2016
-\item \textbf{\texttt{http://cs.lth.se/bjorn-regnell}}  
+\begin{itemize}
+  \item \textbf{\texttt{http://cs.lth.se/bjorn-regnell}}  
 \end{itemize}  
+  
+\item Scala programmer since 2010 
+\item Teaching Scala using Kojo IDE in primary school to kids and teachers since 2011
+\begin{itemize}
+  \item \textbf{\texttt{http://www.kogics.net/kojo-download}}  
+\end{itemize}  
+
+\item Teaching Scala at university level since 2016
+\begin{itemize}
+  \item \textbf{\texttt{https://github.com/lunduniversity/introprog}}  
+\end{itemize}  
+
+\end{itemize}  
+\end{Slide}
+
+\begin{Slide}{Acknowledgements}
+  Many thanks to
+  \begin{itemize}
+    \item hard-working students
+    \item enthusiastic teaching assistants
+    \item supportive colleagues
+    \item contributors to open source course material
+    \begin{itemize}
+      \item \textbf{\fontsize{8}{12}\selectfont\texttt{https://github.com/lunduniversity/introprog/blob/master/contributors.tex}}      
+    \end{itemize}
+    \item the fantastic Scala community 
+  \end{itemize}
 \end{Slide}
 
 \begin{Slide}{Scala first lessons}
@@ -75,7 +100,8 @@ Agenda:
 \begin{itemize}
 \item Why Scala first?
 %Why did we introduce Scala as a first language for computer science and engineering students at Lund Univ.?
-\item Implementing Scala first @ Lund University 
+\item How did we implement Scala first?
+%Implementing Scala first @ Lund University 
 %\item How to handle mixed programming pre-knowledge?
 %How did we deal with a very broad spectrum of pre-knowledge in programming?
 %\item How to develop teaching resources for Scala first?
@@ -93,13 +119,37 @@ Agenda:
 
 \Section{Why Scala first?}
 
-\begin{Slide}{About our Scala students}
+\begin{frame}[plain]
+  \begin{figure}
+  \centering
+  \begin{tikzpicture}[overlay] 
+  \node [] at (0.0mm,-15.0mm) {%
+    \includegraphics[height=1.2\paperheight]{Pictures/kids-programming}%
+  };
+  \end{tikzpicture}%
+  \end{figure}%
+  \end{frame}%
+
+
+\begin{frame}[plain]
+  \begin{figure}
+  \centering
+  \begin{tikzpicture}[overlay] 
+  \node [] at (0.0mm,-5.0mm) {%
+  \includegraphics[height=1.2\paperheight]{Pictures/titlepictureGroup}};
+  \end{tikzpicture}%
+  \end{figure}%
+  \end{frame}%
+
+\begin{Slide}{About our Scala students at Lund Univesity}
 \begin{itemize}
-\item Enrolled at the 5 year program in Computer Science \& Engineering (CSE)
-\item Around 19 years old     
-\item Taking their first programming course in their first semester
-\item Around 70\% has programmed before (C\#, Java, Python, Javascript, ...)
+\item Enrolled at the 5 year program in Computer Science \& Engineering (CSE) at LTH
+\item Taking their first programming course 7.5 ECTS credits during their first semester
+\item More than 80\% are 19--22 years old
+\item Around 15\% are female     
+\item Around 65\% have programmed before (C\#, Java, Python, Javascript, ...)
 \item Very big span of pre-knowledge
+\item Increasingly selective admission: 136 accepted out of 1337 applicants (2018)
 \end{itemize}
 \end{Slide}
 
@@ -110,20 +160,44 @@ First languages for CSE students at LTH:
 (Algol) & (pre-history using punch cards) \\
  Pascal & 1982, CSE program started\\
  Simula &  1990 \\
-Java &  1997 \\
-\textbf{Scala} &  2016 \\
+ {\color{blue}\textbf{Java}} &  1997 \\
+{\color{red}\textbf{Scala}} &  2016 \\
 \end{tabular}
 \end{table}
 
 \end{Slide}
 
+\begin{Slide}{The Java first situation (2015)}
+  I took over as course head in 2015 and ran it as usual with Java first, while in parallell heading the development of the Scala first course material as an open source community project with colleagues and senior students.
+
+  \vspace{1em}%
+  \begin{minipage}[t]{0.45\textwidth}
+      \textbf{Good}:
+      \begin{itemize}
+        \item Course very popular
+        \item Exam results very good:  
+        \begin{tikzpicture}[scale=0.3, every node/.style={scale=0.8}]
+          \pie [color={green!20, green!50, green, red!40} ]  {8/3, 28/4, 48/5, 16/Fail}
+        \end{tikzpicture}
+      
+      \end{itemize}
+    \end{minipage}%
+    \begin{minipage}[t]{0.50\textwidth}
+      \textbf{Bad}:
+      \begin{itemize}
+        %\item Some not so enthusiastic about Java         
+        \item Competent students not challenged
+        \item Poor results in second course
+      \end{itemize}    
+    \end{minipage}
+\end{Slide}
 
 {
 \begin{frame}[plain]
   \begin{tabular}{l | l | l | l | l }
-   Grade &  Result & Result & Result & Result\\
-   First & Second course & Second course & Second course & Second course\\
-   course& 2015 ({\color{blue}\textbf{Java}} first) & 2016 (Scala first) & 2017 (Scala first) & 2018 (Scala first)\\
+   Grade &  Exam results &  &  & \\
+   first & second course &  &  & \\
+   course& 2015 {\color{blue}\textbf{Java}} first & 2016 {\color{red}\textbf{Scala}} first & 2017 {\color{red}\textbf{Scala}} first & 2018 {\color{red}\textbf{Scala}} first\\
 
    {\huge 3} & 
     \begin{minipage}{0.15\textwidth}%
@@ -219,58 +293,102 @@ Java &  1997 \\
 \end{frame}
 }
 
-\begin{frame}[plain]
-
-2016 
-\begin{minipage}{0.3\textwidth}%
-  \begin{tikzpicture}[scale=0.45, every node/.style={scale=0.8}]
-    \pie{10/3, 20/4, 20/5, 50/Failed}
+\begin{Slide}{Scala first -- a big success! \texttt{~:)}}
+\begin{itemize}
+  \item Exam results in second course much better: increased learning outcome
+  \item Course evaluations are still very positive: increased student engagement
+  \item All students are challenged, independent of pre-knowledge
+  \item Students find Scala interesting and novel
+  \item Exam results: \\\vspace{0.5em} 
+  \begin{tabular}{l l l}
+  2016 & 2017 & 2018 \\
+  \begin{minipage}{0.27\textwidth}%
+    \centering%
+    \begin{tikzpicture}[scale=0.3, every node/.style={scale=0.8}]
+      \pie [color={green!20, green!50, green, red!40} ]  {17/3, 31/4, 31/5, 21/Fail}
+    \end{tikzpicture}
+\end{minipage}%
+  & 
+  \begin{minipage}{0.27\textwidth}%
+   \centering%
+   \begin{tikzpicture}[scale=0.3, every node/.style={scale=0.8}]
+    \pie [color={green!20, green!50, green, red!40} ]  {20/3, 29/4, 22/5, 29/Fail}
   \end{tikzpicture}
 \end{minipage}%
-\begin{minipage}{0.3\textwidth}%
-  \begin{tikzpicture}[scale=0.45]
-    \pie{10/3, 20/4, 20/5, 50/Failed}
+ & 
+ \begin{minipage}{0.27\textwidth}%
+  \centering%
+  \begin{tikzpicture}[scale=0.3, every node/.style={scale=0.8}]
+    \pie [color={green!20, green!50, green, red!40} ]  {16/3, 33/4, 36/5, 15/Fail}
   \end{tikzpicture}
-\end{minipage}% 
-\begin{minipage}{0.3\textwidth}%
-  \begin{tikzpicture}[scale=0.45]
-    \pie{10/3, 20/4, 20/5, 50/Failed}
-  \end{tikzpicture}
-\end{minipage}% 
+\end{minipage}%
+   \\
 
-2017
-\begin{minipage}{0.3\textwidth}%
-  \begin{tikzpicture}[scale=0.45]
-    \pie{10/3, 20/4, 20/5, 50/Failed}
-  \end{tikzpicture}
-\end{minipage}% 
+  \end{tabular}
+\end{itemize}
 
-\end{frame}
+\end{Slide}
+
+\begin{Slide}{Why not Python first?}
+  My hypotheses based on some experience (but no systematic empiricism):
+\begin{itemize}
+  \item Non-explicit types in function defs is less efficient when learning abstract thinking
+  \item Indentation syntax with silent begin--end makes nested blocks obscure to beginners
+  \item Dynamic typing means less help in finding bugs; lack of motivation when stuck
+  \item No explicit variable declaration can lead to very hard bugs also for non-beginners 
+  \item Not excellent at object orientation
+  \item Not excellent at functional programming
+\end{itemize}  
+\end{Slide}
+
+\begin{Slide}{Why Scala first?}
+  My hypotheses based on some experience (but no systematic empiricism):
+  \begin{itemize}
+  \item Easy for beginners and interesting for non-beginners (depending how you teach...)
+  \item Regular semantics is easier for beginners; e.g. value types are real objects
+  \item Concise (but not too concise), expressive: do interesting things with small programs
+  \item Static typing help finding bugs: the compiler is your friend
+  \item Interactive learning in the Scala REPL: understand expressions step by step
+  %\item Rich semantics: can demonstrate many computer science concepts
+  \item Modern, evolving language: exciting for students and teachers
+  %\item Free, open source language and tools: no vendor lock-in (cf. .net, Swift)
+  \item Multi-paradigm: excellent for mixing imperative, object-oriented, functional
+  \end{itemize}  
+\end{Slide}
 
 
-\begin{frame}[plain]
-  \begin{figure}
-  \centering
-  \begin{tikzpicture}[overlay] 
-  \node [] at (0.0mm,-15.0mm) {%
-    \includegraphics[height=1.2\paperheight]{Pictures/kids-programming}%
-  };
-  \end{tikzpicture}%
-  \end{figure}%
-  \end{frame}%
+\begin{Slide}{Pedagical support for multi-paradigm language}
+\begin{minipage}{0.3\textwidth}
+  \includegraphics[height=0.6\textheight]{Pictures/marton}\\
+  Marton \& Tsui (2004)
+\end{minipage}%
+\begin{minipage}{0.7\textwidth}
+  Patterns of variation
+  \begin{itemize}
+    \item Patterns of variation    
+  \end{itemize}
+\end{minipage}
+
+\end{Slide}
+
+\Section{How did we implement Scala first?}
+
+\begin{Slide}{Pedagical ideas behind course design}
+  \begin{minipage}[t]{0.3\textwidth}
+    \includegraphics[height=0.6\textheight]{Pictures/brown}\\
+    Brown et al. (2014)
+  \end{minipage}%
+  \begin{minipage}[t]{0.7\textwidth}
+  \end{minipage}
+  
+  \end{Slide}
 
 
-\begin{frame}[plain]
-  \begin{figure}
-  \centering
-  \begin{tikzpicture}[overlay] 
-  \node [] at (0.0mm,-5.0mm) {%
-  \includegraphics[height=1.2\paperheight]{Pictures/titlepictureGroup}};
-  \end{tikzpicture}%
-  \end{figure}%
-  \end{frame}%
+\Section{What did we learn?}
 
-%\begin{frame}[plain]\endpage\end{frame}
- 
-\End
+\Section{The road ahead}
+
+
+\EndSlide
+
 \end{document}
