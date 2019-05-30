@@ -58,8 +58,9 @@
 
 %%%%%%%%%%%%%%%
 
-\begin{Slide}{Who is Bjorn Regnell?}
+\begin{Slide}{Who am I}
 \begin{itemize}
+\item Björn Regnell (skip the strange dots and just call me Bjorn)
 \item Professor in Software Engineering
 \item Dept. of Computer Science, Engineering Faculty LTH, Lund University, Sweden
 \item Research focus: Software Requirements Engineering
@@ -79,6 +80,9 @@
 \end{itemize}  
 
 \end{itemize}  
+\tikz[overlay]{\node at (12,6.2) {\includegraphics[width=2.5cm]{Pictures/bear}};}
+
+
 \end{Slide}
 
 \begin{Slide}{Acknowledgements}
@@ -145,6 +149,7 @@ Agenda:
 \begin{itemize}
 \item Enrolled at the 5 year program in Computer Science \& Engineering (CSE) at LTH
 \item Taking their first programming course 7.5 ECTS credits during their first semester
+\item 100\% are fluent in Swedish
 \item More than 80\% are 19--22 years old
 \item Around 15\% are female     
 \item Around 65\% have programmed before (C\#, Java, Python, Javascript, ...)
@@ -155,20 +160,45 @@ Agenda:
 
 \begin{Slide}{History of first languages at Lund University}
 First languages for CSE students at LTH:
+%\includegraphics[height=1em]{Pictures/pascal} 
 \begin{table}
-\begin{tabular}{l l}
-(Algol) & (pre-history using punch cards) \\
- Pascal & 1982, CSE program started\\
- Simula &  1990 \\
- {\color{blue}\textbf{Java}} &  1997 \\
-{\color{red}\textbf{Scala}} &  2016 \\
+\begin{tabular}{l l l}
+&(Algol) & (pre-history using punch cards) \\
+& Pascal & 1982, CSE program started\\
+& Simula &  1990 \\
+& {\color{blue}\textbf{Java}} &  1997 \\
+& {\color{red}\textbf{Scala}} &  2016 \\
 \end{tabular}
 \end{table}
 
 \end{Slide}
 
+\begin{Slide}{The first year of the CSE program since 2016}
+\begin{table}
+\begin{tabular}{l| p{2.5cm} p{2.5cm} | p{2.5cm} p{2.5cm} }
+  Semester & \multicolumn{2}{l}{Fall semester, 30hp } & \multicolumn{2}{|l}{Spring semester, 30hp} \\ \hline
+  Period & 1 & 2 & 3 & 4 \\ 
+  & \multicolumn{2}{c|}{\tikz{\node [draw, text width=5.22cm, align=center, fill=red!40] {\bf Programming 1 \newline (Scala) 7.5hp};}} 
+  & \tikz{\node [draw, text width=2.5cm, align=center, fill=blue!40] {Progr. 2 (Java) 7.5hp };} 
+  & \tikz{\node [draw, text width=2.5cm, align=center] {\small Discr. struct. (Closure) 5hp };} 
+  \\
+  & \tikz{\node [draw, text width=1.5cm, align=center, fill=red!10] {\small Computer intro. 3hp};} 
+  & \tikz{\node [draw, text width=2.3cm, align=center] {\small Cognition 4.5hp};} 
+  & \multicolumn{2}{c}{\tikz{\node [draw, text width=5.4cm, align=center] {\small Evaluation of software systems  (R) \newline 7hp};}} 
+  \\
+  & \multicolumn{2}{c|}{\tikz{\node [draw, text width=5.2cm, align=center] {\small Mathematics: \newline Calculus in one variable  \newline 15hp};}} 
+  & \tikz{\node [draw, text width=2.5cm, align=center] {\small Physics: photonics 5hp};}
+  & \tikz{\node [draw, text width=2.5cm, align=center] {\small Math: linear algebra 6hp};}
+  \\
+  
+\end{tabular}
+\end{table}  
+{\small A study year is 60 ECTS higher education points (hp) = 40 weeks of full-time studies. }
+
+\end{Slide}
+
 \begin{Slide}{The Java first situation (2015)}
-  I took over as course head in 2015 and ran it as usual with Java first, while in parallell heading the development of the Scala first course material as an open source community project with colleagues and senior students.
+  I took over as course head of the first programming course in 2015 and ran it (almost) as usual with Java first, while in parallell heading the development of the Scala first course material as an open source community project with colleagues and senior students.
 
   \vspace{1em}%
   \begin{minipage}[t]{0.45\textwidth}
@@ -329,24 +359,25 @@ First languages for CSE students at LTH:
 
 \end{Slide}
 
-\begin{Slide}{Why not Python first?}
-  My hypotheses based on some experience (but no systematic empiricism):
-\begin{itemize}
-  \item Non-explicit types in function defs is less efficient when learning abstract thinking
-  \item Indentation syntax with silent begin--end makes nested blocks obscure to beginners
-  \item Dynamic typing means less help in finding bugs; lack of motivation when stuck
-  \item No explicit variable declaration can lead to very hard bugs also for non-beginners 
-  \item Not excellent at object orientation
-  \item Not excellent at functional programming
-\end{itemize}  
-\end{Slide}
+% \begin{Slide}{Why not Python first?}
+%   My hypotheses based on some experience (but no systematic empiricism):
+% \begin{itemize}
+%   \item Dynamic typing means less help in finding bugs -> risk of giving up when stuck
+%   \item Non-explicit types in function defs is less efficient when learning abstract thinking
+%   \item Indentation syntax with silent begin--end makes nested blocks obscure to beginners
+%   \item No explicit variable declaration can lead to very hard bugs also for non-beginners 
+%   \item Not excellent at object orientation
+%   \item Not excellent at functional programming
+% \end{itemize}  
+% \end{Slide}
 
 \begin{Slide}{Why Scala first?}
-  My hypotheses based on some experience (but no systematic empiricism):
+  My hypotheses supported by my experience since 2011 (but no systematic empiricism):
   \begin{itemize}
   \item Easy for beginners and interesting for non-beginners (depending how you teach...)
   \item Regular semantics is easier for beginners; e.g. value types are real objects
   \item Concise (but not too concise), expressive: do interesting things with small programs
+  \item Powerful, simple-to-use standard library: do interesting things with small programs
   \item Static typing help finding bugs: the compiler is your friend
   \item Interactive learning in the Scala REPL: understand expressions step by step
   %\item Rich semantics: can demonstrate many computer science concepts
@@ -358,16 +389,25 @@ First languages for CSE students at LTH:
 
 
 \begin{Slide}{Pedagical support for multi-paradigm language}
-\begin{minipage}{0.3\textwidth}
-  \includegraphics[height=0.6\textheight]{Pictures/marton}\\
-  Marton \& Tsui (2004)
+\begin{minipage}{0.2\textwidth}
+  \includegraphics[height=0.52\textheight]{Pictures/marton}\\
+  {\small Marton \& Tsui \newline (2004)}
 \end{minipage}%
-\begin{minipage}{0.7\textwidth}
-  Patterns of variation
+\begin{minipage}{0.85\textwidth}
   \begin{itemize}
-    \item Patterns of variation    
+    \item Learning is the process of being capable of \textit{doing} something
+    \item Learners construct a language by discerning parts and wholes % that are experienced in context   
+    \item Patterns of variation:
+    \begin{itemize}
+      \item \textbf{Contrast}: to experience something, you need to experience something else to compare with    
+      \item \textbf{Generalisation}: to understand a concept you need to be able to abstract from irrelevant features    
+      \item \textbf{Separation}: to experience a certain aspect of something you need to vary that aspect while other aspects remain invariant    
+      \item \textbf{Fusion}: to be capable of doing something advanced you need to experience several critical aspects at the same time    
+    \end{itemize}
   \end{itemize}
 \end{minipage}
+
+\vspace{1em} Scala enables contrasting, generalisation, separation and fusion across paradigms.
 
 \end{Slide}
 
