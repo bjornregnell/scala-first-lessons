@@ -149,9 +149,9 @@ Agenda:
 \begin{itemize}
 \item Enrolled at the 5 year program in Computer Science \& Engineering (CSE) at LTH
 \item Taking their first programming course 7.5 ECTS credits during their first semester
-\item 100\% are fluent in Swedish
 \item More than 80\% are 19--22 years old
 \item Around 15\% are female     
+\item 100\% are fluent in, or native, Swedish
 \item Around 65\% have programmed before (C\#, Java, Python, Javascript, ...)
 \item Very big span of pre-knowledge
 \item Increasingly selective admission: 136 accepted out of 1337 applicants (2018)
@@ -397,7 +397,7 @@ First languages for CSE students at LTH:
 \end{Slide}
 
 
-\begin{Slide}{Pedagical support for multi-paradigm language}
+\begin{Slide}{Teaching benefits of a multi-paradigm language}
 \begin{minipage}{0.2\textwidth}
   \includegraphics[height=0.52\textheight]{Pictures/marton}\\
   {\small Marton \& Tsui \newline (2004)}
@@ -422,18 +422,105 @@ First languages for CSE students at LTH:
 
 \Section{How did we implement Scala first?}
 
-\begin{Slide}{Pedagical ideas behind course design}
-  \begin{minipage}[t]{0.3\textwidth}
+\begin{Slide}{Pedagogical ideas behind course design}
+  \begin{minipage}{0.3\textwidth}
     \includegraphics[height=0.6\textheight]{Pictures/brown}\\
     Brown et al. (2014)
   \end{minipage}%
-  \begin{minipage}[t]{0.7\textwidth}
+  \begin{minipage}{0.7\textwidth}
+    A great summary of research on effective learning strategies:
+    \begin{itemize}
+      \item How learning occurs: encoding, consolidation, retrieval
+      \item Low-stake self testing to retrieve what you learned and identify missing pieces
+      \item Deliberate practice: spaced out \& interleaved
+      \item Use reflection \& elaboration as you retrieve
+      \item Easier isn't better: embrace desirable difficulties
+      \item How effort helps: reconsolidation, creating mental models, broaden mastery, foster conceptual learning, improve versatility, prime your mind for learning 
+      \item Dismissed myths: errorless learning, learning styles
+    \end{itemize}
   \end{minipage}
   
   \end{Slide}
 
+\begin{Slide}{A typical study week}
+\begin{table}\centering
+  \begin{tabular}{l | l |l l | l}
+  Mon & Tues & Wed & Thu & Fri \\ \hline
+  Lecture (2h) & Lecture (2h) & \multicolumn{2}{c|}{Workshop (2h)} & Lab session (2h) \\ \hline
+  \end{tabular}
+\end{table}
+  \begin{itemize}
+    \item Workshops and labs in school computer rooms with Ubuntu and preinstalled tools. 
+    \item Workshops have 1 teaching assistant per 12 students. 
+    \item If there is space left in room you can attend several workshops.
+    \item Computer rooms are available to students 24/7.
+  \end{itemize}
+
+\vfill Link to schedule: \url{http://cs.lth.se/pgk/schema/}
+\end{Slide}  
+
+\begin{Slide}{The first week is special}
+  
+  \begin{itemize}
+    \item Simple intro to programming is using REPL and Kojo with turtle graphics%: \url{http://www.kogics.net/kojo-download}: \\ Working with expressions in REPL and control flow principles (SARA) in Kojo: 
+    \begin{itemize}
+      \item \textbf{S}equence (statements)
+      \item \textbf{A}lternative (if statements)
+      \item \textbf{R}epetition (repeat construct without loop variable)
+      \item \textbf{A}bstraction (simple procedures)   
+    \end{itemize}
+    \item Computing course in parallel with intro to terminal on school computers (Ubuntu with preinstalled Scala tools)
+    \item Student's playful freshman activities in parallell
+
+  \end{itemize}
+
+\end{Slide}  
+
+
+  
+
+
+\begin{Slide}{Continuous examination: Lab sessions}
+  
+\end{Slide}  
+
+\begin{Slide}{Mid term diagnostic test: early warning}
+  
+\end{Slide}  
+
+
+\begin{Slide}{Final exam: securing the learning outcome}
+  
+\end{Slide}  
+
 
 \Section{What did we learn?}
+
+\begin{Slide}{Designing a progression with Scala first}
+\begin{itemize}
+  \item Start with Expressions and simple functions first, and then small but complete programs with imperative statements \& procedures 
+  \item Objects are introduced as modules to create name space
+  \item Classes are introduced as several instances are needed
+  \item Case classes introduced together with general classes: \\
+   contrast immutable data and instances with mutable state
+  \item Inheritance introduced late, except for enumerations
+\end{itemize}
+\end{Slide}  
+
+
+\begin{Slide}{}
+  
+\end{Slide}  
+
+\begin{Slide}{Functions for abstraction, modules for name}
+  
+\end{Slide}  
+
+
+\begin{Slide}{Balance between object-oriented and functional}
+  
+\end{Slide}  
+
 
 \Section{The road ahead}
 
