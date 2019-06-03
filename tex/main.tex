@@ -34,7 +34,7 @@
   Bjorn Regnell\newline
   Dept.\@ of Computer Science, Lund University}
 %%%%%%%%%%%%%%%%%%%%%
-%\usepackage{verbatim}
+\usepackage{verbatim}
 %%%%%%%%%%%%% Verbatim code box
 \usepackage[skins,listings]{tcolorbox}
 \tcbuselibrary{listingsutf8}
@@ -48,9 +48,17 @@
 
 \newcommand{\Section}[1]{\titleimagecolor{red}\section{#1}}
 
+\newcommand{\code}{\lstinline[basicstyle=\ttfamily]}
+
 \newenvironment{Slide}[1]%
   {\begin{frame}[environment=Slide]{#1}}
   {\end{frame}}%
+
+% \newenvironment{Slide}[2][]  /// AAARGH strange error???
+%   {\begin{frame}[fragile,environment=Slide,#1]{#2}}
+%   {\end{frame}}
+
+
 
 \begin{document}
 
@@ -443,37 +451,63 @@ First languages for CSE students at LTH:
   \end{Slide}
 
 \begin{Slide}{A typical study week}
+  Resources for 135 students: 1 lecturer (me), 14 teaching assistants (older students), 
 \begin{table}\centering
   \begin{tabular}{l | l |l l | l}
-  Mon & Tues & Wed & Thu & Fri \\ \hline
+  Mon & Tue & Wed & Thu & Fri \\ \hline
   Lecture (2h) & Lecture (2h) & \multicolumn{2}{c|}{Workshop (2h)} & Lab session (2h) \\ \hline
   \end{tabular}
 \end{table}
   \begin{itemize}
     \item Workshops and labs in school computer rooms with Ubuntu and preinstalled tools. 
     \item Workshops have 1 teaching assistant per 12 students. 
+    \item 7 workshop time slots (2h) in 2 rooms in parallell.
+    \item 2 lab time slots (2h) in 6 rooms in parallell.
     \item If there is space left in room you can attend several workshops.
-    \item Computer rooms are available to students 24/7.
+    \item Computer rooms are available to students 24/7 when no teaching is scheduled.
   \end{itemize}
 
 \vfill Link to schedule: \url{http://cs.lth.se/pgk/schema/}
 \end{Slide}  
 
-\begin{Slide}{The first week is special}
+\begin{Slide}{Progression}
+  \fontsize{7}{9}\selectfont
+  \begin{tabular}{l|l|l|l}
+    \textit{Week} & \textit{Module} & \textit{Workshop} & \textit{Lab} \\ \hline \hline
+    W01 & Introduction & expressions & kojo \\
+    W02 & Programs & programs & -- \\
+    W03 & Functions & functions & irritext \\
+    W04 & Objects & objects & blockmole \\
+    W05 & Classes & classes & blockbattle \\
+    W06 & Sequences & sequences & shuffle \\
+    W07 & Set, Map & lookup & words \\
+        & Diagnostic test & -- & -- \\
+    W08 & Matrices & matrices & life \\
+    W09 & Inheritance & inheritance & snake \\
+    W10 & Patterns, exceptions & patterns & tabular \\
+    W11 & Scala vs Java & scala-java & javatext \\
+    W12 & Sorting & sort & -- \\
+    W13--W14 & Exam prep., projekt & examprep & Projekt \\
+        & Written exam & -- & -- \\
+    \end{tabular}  
+\end{Slide}
+
+\begin{Slide}{The first three weeks are playful}
   
   \begin{itemize}
-    \item Simple intro to programming is using REPL and Kojo with turtle graphics%: \url{http://www.kogics.net/kojo-download}: \\ Working with expressions in REPL and control flow principles (SARA) in Kojo: 
+    \item Computing course in parallel with intro to terminal on school computers (Ubuntu)
+    \item Student's traditional freshman games and festivities in parallell
+    \item Week 1: Easy intro to programming is using REPL and Kojo with turtle graphics%: \url{http://www.kogics.net/kojo-download}: \\ Working with expressions in REPL and control flow principles (SARA) in Kojo: 
     \begin{itemize}
       \item \textbf{S}equence (statements)
       \item \textbf{A}lternative (if statements)
       \item \textbf{R}epetition (repeat construct without loop variable)
-      \item \textbf{A}bstraction (simple procedures)   
+      \item \textbf{A}bstraction (simple functions)   
     \end{itemize}
-    \item Computing course in parallel with intro to terminal on school computers (Ubuntu with preinstalled Scala tools)
-    \item Student's playful freshman activities in parallell
-
+    \item Week 2: small readln println programs \\ compile in terminal with \code|scalac|, run with \code|scala|
+    \item Week 3: create a lagom irritating terminal text game at your challenge level \\ compile \& run with \code|sbt ~run| , you should divide your game into several functions   
   \end{itemize}
-
+\footnotesize{https://en.wikipedia.org/wiki/Lagom}
 \end{Slide}  
 
 
