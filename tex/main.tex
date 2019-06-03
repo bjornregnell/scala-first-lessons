@@ -388,21 +388,6 @@ First languages for CSE students at LTH:
 % \end{itemize}  
 % \end{Slide}
 
-\begin{Slide}{Why Scala first?}
-  My hypotheses supported by my experience since 2011 (but no systematic empiricism):
-  \begin{itemize}
-  \item Easy for beginners and interesting for non-beginners (depending how you teach...)
-  \item Regular semantics is easier for beginners; e.g. value types are real objects
-  \item Concise (but not too concise), expressive: do interesting things with small programs
-  \item Powerful, simple-to-use standard library: do interesting things with small programs
-  \item Static typing help finding bugs: the compiler is your friend
-  \item Interactive learning in the Scala REPL: understand expressions step by step
-  %\item Rich semantics: can demonstrate many computer science concepts
-  \item Modern, evolving language: exciting for students and teachers
-  %\item Free, open source language and tools: no vendor lock-in (cf. .net, Swift)
-  \item Multi-paradigm: excellent for mixing imperative, object-oriented, functional
-  \end{itemize}  
-\end{Slide}
 
 
 \begin{Slide}{Teaching benefits of a multi-paradigm language}
@@ -515,39 +500,61 @@ First languages for CSE students at LTH:
 
 
 \begin{Slide}{Continuous examination: Lab sessions}
-  
+  bilder från valda labbar; labbar är kul!!
 \end{Slide}  
 
 \begin{Slide}{Mid term diagnostic test: early warning}
-  
+peer marked  
 \end{Slide}  
 
 
 \begin{Slide}{Final exam: securing the learning outcome}
-  
+  written hall exam using pen and paper and Scala quick ref only
 \end{Slide}  
 
 
 \Section{What did we learn?}
 
-\begin{Slide}{Designing a progression with Scala first}
-\begin{itemize}
-  \item Start with Expressions and simple functions first, and then small but complete programs with imperative statements \& procedures 
+
+\begin{Slide}{Experiences with Scala first -- Benefits}
+  My hypotheses supported by my experience since 2011 (but no systematic empiricism):
+  \begin{itemize}
+  \item Easy for beginners and interesting for non-beginners (depending how you teach...)
+  \item Regular semantics is easier for beginners; e.g. value types are real objects
+  \item Concise (but not too concise), expressive: do interesting things with small programs
+  \item Powerful, simple-to-use standard library: do interesting things with small programs
+  \item Static typing help finding bugs: the compiler is your friend
+  \item Interactive learning in the Scala REPL: understand expressions step by step
+  %\item Rich semantics: can demonstrate many computer science concepts
+  \item Modern, evolving language: exciting for students and teachers
+  %\item Free, open source language and tools: no vendor lock-in (cf. .net, Swift)
+  \item Multi-paradigm: excellent for mixing imperative, object-oriented, functional
+  \end{itemize}  
+\end{Slide}
+
+\begin{Slide}{Experiences with Scala first -- Challenges}
+  Things we have struggled with in a trial \& error fashion:
+  \begin{itemize}
+  \item Developing teaching material for Scala from scratch that fit our context 
+  \item Carefully select a lagom subset of Scala
+  \item Carefully design an effective progression with iteration of concepts
+  \item Complete beginners stumble on getting tooling to work on their own machines
+  \end{itemize}  
+\end{Slide}
+
+
+
+\begin{Slide}{Experience-base progression for Scala first}
+ \begin{itemize}
+ \item  Introduce concepts iteratively: first separated, then combined,  use variation patterns  
+ \item Start with expressions and simple functions REPL, then small but complete imperative programs compiled in terminal: manifest mental model of execution
   \item Objects are introduced as modules to create name space
-  \item Classes are introduced as several instances are needed
+  \item Classes are introduced to enable multiple instances
   \item Case classes introduced together with general classes: \\
-   contrast immutable data and instances with mutable state
-  \item Inheritance introduced late, except for enumerations
+   contrast immutable and mutable state
+  \item Inheritance introduced iteratively, start with simple enumerations (base trait + case object == simple algebraic data types)
+  \item Progression of collections usage: \\ sequences (Vector, Array), nested sequences, Set, Map 
 \end{itemize}
-\end{Slide}  
-
-
-\begin{Slide}{}
-  
-\end{Slide}  
-
-\begin{Slide}{Functions for abstraction, modules for name}
-  
 \end{Slide}  
 
 
