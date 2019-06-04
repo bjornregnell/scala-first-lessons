@@ -376,20 +376,6 @@ First languages for CSE students at LTH:
 
 \end{Slide}
 
-% \begin{Slide}{Why not Python first?}
-%   My hypotheses based on some experience (but no systematic empiricism):
-% \begin{itemize}
-%   \item Dynamic typing means less help in finding bugs -> risk of giving up when stuck
-%   \item Non-explicit types in function defs is less efficient when learning abstract thinking
-%   \item Indentation syntax with silent begin--end makes nested blocks obscure to beginners
-%   \item No explicit variable declaration can lead to very hard bugs also for non-beginners 
-%   \item Not excellent at object orientation
-%   \item Not excellent at functional programming
-% \end{itemize}  
-% \end{Slide}
-
-
-
 \begin{Slide}{Teaching benefits of a multi-paradigm language}
 \begin{minipage}{0.2\textwidth}
   \includegraphics[height=0.52\textheight]{Pictures/marton}\\
@@ -445,71 +431,124 @@ First languages for CSE students at LTH:
 \end{table}
   \begin{itemize}
     \item Workshops and labs in school computer rooms with Ubuntu and preinstalled tools. 
-    \item Workshops have 1 teaching assistant per 12 students. 
-    \item 7 workshop time slots (2h) in 2 rooms in parallell.
-    \item 2 lab time slots (2h) in 6 rooms in parallell.
+    \item Workshops focus on work with \textbf{exercises} on concepts related to a weekly \textbf{theme}. 
+    \item 7 workshop time slots (2h) per week in 2 computer rooms in parallell. 
     \item If there is space left in room you can attend several workshops.
+    \item 2 \textbf{lab} time slots (2h) per week in 6 rooms in parallell. Labs are assessed pass/fail.
     \item Computer rooms are available to students 24/7 when no teaching is scheduled.
+    %\item Link to full schedule: \url{http://cs.lth.se/pgk/schema/}
   \end{itemize}
-
-\vfill Link to schedule: \url{http://cs.lth.se/pgk/schema/}
 \end{Slide}  
 
-\begin{Slide}{Progression}
-  \fontsize{7}{9}\selectfont
-  \begin{tabular}{l|l|l|l}
-    \textit{Week} & \textit{Module} & \textit{Workshop} & \textit{Lab} \\ \hline \hline
-    W01 & Introduction & expressions & kojo \\
-    W02 & Programs & programs & -- \\
-    W03 & Functions & functions & irritext \\
-    W04 & Objects & objects & blockmole \\
-    W05 & Classes & classes & blockbattle \\
-    W06 & Sequences & sequences & shuffle \\
-    W07 & Set, Map & lookup & words \\
-        & Diagnostic test & -- & -- \\
-    W08 & Matrices & matrices & life \\
-    W09 & Inheritance & inheritance & snake \\
-    W10 & Patterns, exceptions & patterns & tabular \\
-    W11 & Scala vs Java & scala-java & javatext \\
-    W12 & Sorting & sort & -- \\
-    W13--W14 & Exam prep., projekt & examprep & Projekt \\
-        & Written exam & -- & -- \\
-    \end{tabular}  
-\end{Slide}
+\begin{Slide}{Progression of main themes}
+  \begin{minipage}{0.54\textwidth}
+    \fontsize{8.7}{10}\selectfont
+    % \begin{tabular}{|l|l|l|}
+    %   \textit{Week} & \textit{Main Theme} & \textit{Lab} \\ \hline \hline
+    %   W01 & Introduction    & kojo \\
+    %   W02 & Programs        & -- \\
+    %   W03 & Functions       & irritext \\
+    %   W04 & Objects         & blockmole \\
+    %   W05 & Classes         & blockbattle \\
+    %   W06 & Sequences       & shuffle \\
+    %   W07 & Sets, Maps      & words \\ \hline 
+    %       & Diagnostic test & -- \\ \hline
+    %   W08 & Matrices        & life \\
+    %   W09 & Inheritance     & snake \\
+    %   W10 & Patterns        & tabular \\
+    %   W11 & Scala \& Java   & javatext \\
+    %   W12 & Sorting         & -- \\
+    %   W13 & Projekt         & Projekt \\
+    %   W14 & Exam prep.      & \\ \hline
+    %       & Written exam    &  \\ 
+    %   \end{tabular}  
+    \begin{tabular}{|l|l|l|l|}
+      \textit{Week} & \textit{Main Theme} & \textit{Lab} & \textit{Tools}\\ \hline \hline
+      W01 & Expressions     & kojo        & Kojo, REPL\\
+      W02 & Programs        & --          & vscode, scalac\\
+      W03 & Functions       & irritext    & sbt\\
+      W04 & Objects         & blockmole   & introprog-scalalib\\
+      W05 & Classes         & --          & \\
+      W06 & Patterns        & blockbattle & \\
+      W07 & Sequences       &  shuffle    & \\ \hline 
+          & Diagnostic test & --          & \\ \hline
+      W08 & Matrices        & life        & IntelliJ (opt.)\\
+      W09 & Sets, Maps      & words       & \\
+      W10 & Inheritance     & snake       & \\
+      W11 & Scala \& Java   & javatext    & \\
+      W12 & Search \& Sort  & --          & \\
+      W13 & Projekt         & Projekt     & \\
+      W14 & Exam prep.      &             & \\ \hline
+          & Written exam    &             & \\ 
+      \end{tabular}  
+
+  \end{minipage}%
+    \begin{minipage}{0.32\textwidth}
+      \begin{itemize}
+        \item Progression is based on experiences 2016-2018 
+        \item Supported by OSS lecture slides and \textbf{compendium} with weekly assignments (exercises \& labs)
+        %\\ https://github.com/lunduniversity/introprog
+        \item Simple Scala lib with pixel window, io etc.: {github.com/lunduniversity/\\\textbf{introprog-scalalib}}
+      \end{itemize}
+    \end{minipage}%
+    \tikz[overlay]{\node [text width=2.1cm, align=left] at (1,0.5) {\includegraphics[width=1.0\textwidth]{Pictures/compendium}};} 
+  \end{Slide}
 
 \begin{Slide}{The first three weeks are playful}
   
   \begin{itemize}
-    \item Computing course in parallel with intro to terminal on school computers (Ubuntu)
     \item Student's traditional freshman games and festivities in parallell
-    \item Week 1: Easy intro to programming is using REPL and Kojo with turtle graphics%: \url{http://www.kogics.net/kojo-download}: \\ Working with expressions in REPL and control flow principles (SARA) in Kojo: 
-    \begin{itemize}
-      \item \textbf{S}equence (statements)
-      \item \textbf{A}lternative (if statements)
-      \item \textbf{R}epetition (repeat construct without loop variable)
-      \item \textbf{A}bstraction (simple functions)   
-    \end{itemize}
-    \item Week 2: small readln println programs \\ compile in terminal with \code|scalac|, run with \code|scala|
-    \item Week 3: create a lagom irritating terminal text game at your challenge level \\ compile \& run with \code|sbt ~run| , you should divide your game into several functions   
+    \item Computing course in parallel with intro to terminal on school computers (Ubuntu)
+    \item \textbf{Week 1}: Intro to basics using expressions in REPL and turtle graphics in Kojo; \textbf{S}equencing, \textbf{A}lternative, \textbf{R}epetition, \textbf{A}bstraction (SARA)%: \url{http://www.kogics.net/kojo-download}: \\ Working with expressions in REPL and control flow principles (SARA) in Kojo: 
+    \begin{minipage}{0.3\textwidth}
+      
+    \end{minipage} 
+ 
+    \item \textbf{Week 2}: Small readln println programs using editor (VS Code + Metals)\\ Compile in terminal with \code|scalac|, run with \code|scala|
+      
+    \item \textbf{Week 3}: Create a \textit{lagom} irritating terminal text game at your challenge level \\ Compile \& run with \code|sbt ~run| , you should divide your code into several functions   
   \end{itemize}
-\footnotesize{https://en.wikipedia.org/wiki/Lagom}
+\footnotesize{https://en.wikipedia.org/wiki/\textbf{Lagom} \\ Swedish for ''\textbf{just right}'', carries the connotation of appropriateness, although not necessarily perfection}
 \end{Slide}  
 
 
+\begin{Slide}{A first understanding of basic concepts (SARA)}
+\begin{minipage}{0.6\textwidth}
+\includegraphics[width=0.9\textwidth]{Pictures/kojo}  
+\end{minipage}%
+\begin{minipage}{0.4\textwidth}
+ \includegraphics[width=0.15\textwidth]{Pictures/square}%
+ \includegraphics[width=0.25\textwidth]{Pictures/square-column}%
+ \includegraphics[width=0.5\textwidth]{Pictures/square-grid}  \\
+ \vfill\footnotesize{http://www.kogics.net/kojo}
+\end{minipage}%
+\end{Slide}  
   
 
 
-\begin{Slide}{Continuous examination: Lab sessions}
-  bilder från valda labbar; labbar är kul!!
+\begin{Slide}{Continuous assessment: Lab sessions}
+  \begin{tabular}{c c c c}
+    W04: \textbf{blockmole} & W06: \textbf{blockbattle} & W08: \textbf{life} & W10: \textbf{snake} \\
+  \includegraphics[width=0.2\textwidth]{Pictures/blockmole} &
+  \includegraphics[width=0.15\textwidth]{Pictures/blockbattle} &
+  \includegraphics[width=0.27\textwidth]{Pictures/life} &
+  \includegraphics[width=0.25\textwidth]{Pictures/snake} 
+  \\
+\end{tabular}%
 \end{Slide}  
 
-\begin{Slide}{Mid term diagnostic test: early warning}
-peer marked  
+\begin{Slide}{Mid term diagnostic test: progress check}
+  \begin{itemize}
+    \item same format as final exam, but half as big, 2.5 h
+    \item peer marking
+    \item confirm that you are on track
+    \item early warning for some
+  \end{itemize}
 \end{Slide}  
 
 
 \begin{Slide}{Final exam: securing the learning outcome}
-  written hall exam using pen and paper and Scala quick ref only
+  5h written hall exam using pen and paper and Scala quick ref only
 \end{Slide}  
 
 
@@ -535,25 +574,28 @@ peer marked
 \begin{Slide}{Experiences with Scala first -- Challenges}
   Things we have struggled with in a trial \& error fashion:
   \begin{itemize}
-  \item Developing teaching material for Scala from scratch that fit our context 
-  \item Carefully select a lagom subset of Scala
-  \item Carefully design an effective progression with iteration of concepts
-  \item Complete beginners stumble on getting tooling to work on their own machines
+  \item Developing OSS \textbf{teaching material} for Scala from scratch that \textbf{fit our context} 
+  \item Selecting a \textbf{lagom subset} of Scala
+  \item Designing an \textbf{effective progression} with step-wise iteration of concepts combined
+  %\item Complete beginners stumble on getting tooling to work on their own machines
+  \item Helping beginners to overcome \textbf{tool barriers} (editor, compiler, build tool, IDE)
   \end{itemize}  
 \end{Slide}
 
 
 
-\begin{Slide}{Experience-base progression for Scala first}
+\begin{Slide}{Key ingredients in our progression for Scala first}
  \begin{itemize}
  \item  Introduce concepts iteratively: first separated, then combined,  use variation patterns  
- \item Start with expressions and simple functions REPL, then small but complete imperative programs compiled in terminal: manifest mental model of execution
+ \item Initial playful assignments to illustrate programming (e.g. using turtle graphics)
+ \item Start with expressions and simple functions in REPL, then small but complete imperative programs compiled in terminal: manifest mental model of execution
   \item Objects are introduced as modules to create name space
   \item Classes are introduced to enable multiple instances
   \item Case classes introduced together with general classes: \\
-   contrast immutable and mutable state
+   contrast immutable and mutable state; use patterns to deconstruct data
   \item Inheritance introduced iteratively, start with simple enumerations (base trait + case object == simple algebraic data types)
-  \item Progression of collections usage: \\ sequences (Vector, Array), nested sequences, Set, Map 
+  \item Progression of collections: sequences (Vector, Array), nested sequences, Set, Map 
+  \item Power of higher-order functions experienced through the collection library
 \end{itemize}
 \end{Slide}  
 
@@ -567,5 +609,19 @@ peer marked
 
 
 \EndSlide
+
+\begin{Slide}{Why not Python first?}
+  My hypotheses based on some experience (but no systematic empiricism):
+\begin{itemize}
+  \item Dynamic typing means less help in finding bugs -> no dialog with the compiler, less conceptual learning
+  \item Non-explicit types in function defs is less efficient when learning abstract thinking
+  \item Indentation syntax with silent begin--end makes nested blocks obscure to beginners
+  \item No explicit variable declaration can lead to very hard bugs also for non-beginners 
+  \item Refactoring is more risky and hence discouraging
+  \item Not excellent at object orientation
+  \item Not excellent at functional programming
+\end{itemize}  
+\end{Slide}
+
 
 \end{document}
