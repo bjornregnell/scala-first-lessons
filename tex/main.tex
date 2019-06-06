@@ -167,14 +167,17 @@ Agenda:
 \end{Slide}
 
 \begin{Slide}{History of first languages at Lund University}
-First languages for CSE students at LTH:
+First languages for students of the Computer Science and Engineering (CSE) program:
 \begin{table}
-\begin{tabular}{l l}
-(Algol) & (pre-history using punch cards) \\
- Pascal & 1982, CSE program started\\
- Simula &  1990 \\
- {\color{blue}\textbf{Java}} &  1997 \\
- {\color{red}\textbf{Scala}} &  2016 \\
+\begin{tabular}{c r | l l}
+     & (Algol) & & (pre-history, starting with punch cards...) \\ & & \\
+     & & 1982  & CSE program started at LTH\\ &  & \\
+%\includegraphics[height=1.2em]{Pictures/pascal}  
+&  { Pascal} & 1982--1989 & 8 years\\ &  & \\
+%\includegraphics[height=1.2em]{Pictures/simula}  
+&  { Simula} &  1990--1996 & 7 years \\
+\includegraphics[height=2em]{Pictures/duke}    &  {\color{blue}\textbf{Java}} &  1997--2015 & 19 years \\
+\includegraphics[height=2em]{Pictures/scala}   &  {\color{red}\textbf{Scala}} &  2016-- & \\
 \end{tabular}
 \end{table}
 
@@ -186,10 +189,10 @@ First languages for CSE students at LTH:
   Semester & \multicolumn{2}{l}{Fall semester, 30hp } & \multicolumn{2}{|l}{Spring semester, 30hp} \\ \hline
   Period & 1 & 2 & 3 & 4 \\ 
   & \multicolumn{2}{c|}{\tikz{\node [draw, text width=5.22cm, align=center, fill=red!40] {\bf Programming 1 \newline (Scala) 7.5hp};}} 
-  & \tikz{\node [draw, text width=2.5cm, align=center, fill=blue!40] {Progr. 2 (Java) 7.5hp };} 
+  & \tikz{\node [draw, text width=2.5cm, align=center, fill=blue!30] {Progr. 2 (Java) 7.5hp };} 
   & \tikz{\node [draw, text width=2.5cm, align=center] {\small Discr. struct. (Closure) 5hp };} 
   \\
-  & \tikz{\node [draw, text width=1.5cm, align=center, fill=red!10] {\small Computer intro. 3hp};} 
+  & \tikz{\node [draw, text width=1.5cm, align=center, fill=green!20] {\small Computer intro. 3hp};} 
   & \tikz{\node [draw, text width=2.3cm, align=center] {\small Cognition 4.5hp};} 
   & \multicolumn{2}{c}{\tikz{\node [draw, text width=5.4cm, align=center] {\small Evaluation of software systems  (R) \newline 7hp};}} 
   \\
@@ -462,7 +465,7 @@ First languages for CSE students at LTH:
     %   W14 & Exam prep.      & \\ \hline
     %       & Written exam    &  \\ 
     %   \end{tabular}  
-    \begin{tabular}{|l|l|l|l|}
+    \begin{tabular}{|l|l|l|l|} 
       \textit{Week} & \textit{Main Theme} & \textit{Lab} & \textit{Tools}\\ \hline \hline
       W01 & Expressions     & kojo        & Kojo, REPL\\
       W02 & Programs        & --          & vscode, scalac\\
@@ -471,15 +474,15 @@ First languages for CSE students at LTH:
       W05 & Classes         & --          & \\
       W06 & Patterns        & blockbattle & \\
       W07 & Sequences       &  shuffle    & \\ \hline 
-          & Diagnostic test & --          & \\ \hline
-      W08 & Matrices        & life        & IntelliJ (opt.)\\
+      \multicolumn{2}{r}{\textit{Exam period:}} & \multicolumn{2}{l}{\textit{Diagnostic test}} \\ \hline
+      W08 & Matrices        & life        & IDE: IntelliJ (opt.)\\
       W09 & Sets, Maps      & words       & \\
       W10 & Inheritance     & snake       & \\
       W11 & Scala \& Java   & javatext    & \\
       W12 & Search \& Sort  & --          & \\
       W13 & Projekt         & Projekt     & \\
       W14 & Exam prep.      &             & \\ \hline
-          & Written exam    &             & \\ 
+      \multicolumn{2}{r}{\textit{Exam period:}} & \multicolumn{2}{l}{\textit{Final exam}} \\ \hline
       \end{tabular}  
 
   \end{minipage}%
@@ -534,22 +537,25 @@ First languages for CSE students at LTH:
   \includegraphics[width=0.27\textwidth]{Pictures/life} &
   \includegraphics[width=0.25\textwidth]{Pictures/snake} 
   \\
+  \small val, var, function, & \small class, case class & \small nested structures, & \small inheritance, \\
+  \small object, name space, & \small match, pattern, & \small higher order fun, & \small interface, override, \\
+  \small import, if else if else & \small a larger program & \small generic case class & \small team work\\
 \end{tabular}%
 \end{Slide}  
 
-\begin{Slide}{Mid term diagnostic test: progress check}
-  \begin{itemize}
-    \item same format as final exam, but half as big, 2.5 h
-    \item peer marking
-    \item confirm that you are on track
-    \item early warning for some
-  \end{itemize}
-\end{Slide}  
+% \begin{Slide}{Mid term diagnostic test: progress check}
+%   \begin{itemize}
+%     \item same format as final exam, but half as big, 2.5 h
+%     \item peer marking
+%     \item confirm that you are on track
+%     \item early warning for some
+%   \end{itemize}
+% \end{Slide}  
 
 
-\begin{Slide}{Final exam: securing the learning outcome}
-  5h written hall exam using pen and paper and Scala quick ref only
-\end{Slide}  
+% \begin{Slide}{Final exam: securing the learning outcome}
+%   5h written hall exam using pen and paper and Scala quick ref only
+% \end{Slide}  
 
 
 \Section{What did we learn?}
@@ -593,35 +599,68 @@ First languages for CSE students at LTH:
   \item Classes are introduced to enable multiple instances
   \item Case classes introduced together with general classes: \\
    contrast immutable and mutable state; use patterns to deconstruct data
-  \item Inheritance introduced iteratively, start with simple enumerations (base trait + case object == simple algebraic data types)
+  \item Inheritance introduced iteratively, start with simple sum type (base trait + case object)
   \item Progression of collections: sequences (Vector, Array), nested sequences, Set, Map 
   \item Power of higher-order functions experienced through the collection library
 \end{itemize}
 \end{Slide}  
 
 
-\begin{Slide}{Balance between object-oriented and functional}
-  
+\begin{Slide}{Balance and mix object-oriented \& functional}
+  Scala's OO+FP mix enables learning by concept awareness and contrasting:
+  \begin{itemize}
+    \item Awareness of types of values, expressions, parameters, return types
+    \item Contrast mutable state (class with var) -- immutable data (case class)
+    \item Contrast inheritance for modelling -- inheritance for reuse
+    \item Contrast side-effecting functions -- referentially transparent functions
+    \item Contrast inheritance -- composition -- state-less modules of functions
+  \end{itemize}
 \end{Slide}  
 
 
 \Section{The road ahead}
 
-
-\EndSlide
+\begin{Slide}{The future of Scala at Lund University}
+\begin{itemize}
+  \item CSE students strongly support Scala first; course evaluations are excellent
+  \item There is a great interest among CSE students to continue with Scala in later courses; this depends on if more cs teachers want to learn and try out Scala 
+  \item Hopefully more IT programs that currently have Java first are attracted to the new pedagogical concept of the CSE course
+  \item On-going debate of pros and cons of Scala first versus Python first for non-IT programs, e.g. chemistry, physics, civil engineering etc.
+\end{itemize}  
+\vfill \url{https://www.signifytechnology.com/blog/2018/06/supporting-scala-adoption-in-colleges-by-mark-lewis}
+\end{Slide}
 
 \begin{Slide}{Why not Python first?}
   My hypotheses based on some experience (but no systematic empiricism):
 \begin{itemize}
-  \item Dynamic typing means less help in finding bugs -> no dialog with the compiler, less conceptual learning
+  \item Dynamic typing means less help in finding bugs
+  \item No ''typing dialog'' with a compiler means less conceptual learning
   \item Non-explicit types in function defs is less efficient when learning abstract thinking
-  \item Indentation syntax with silent begin--end makes nested blocks obscure to beginners
+  \item Indentation syntax with silent begin-end makes nested blocks obscure to beginners
   \item No explicit variable declaration can lead to very hard bugs also for non-beginners 
-  \item Refactoring is more risky and hence discouraging
+  \item Refactoring is more risky, hence discouraging -> bad for stepwise problem solving
   \item Not excellent at object orientation
   \item Not excellent at functional programming
 \end{itemize}  
 \end{Slide}
+
+\begin{Slide}{A better Scala deal for beginner teachers}
+  \begin{itemize}
+    \item Scala 3 for beginners: working on new idioms for ''Scala the simple parts''
+    \item Spreading the news of Scala turning main-stream in industry and academia
+    \item Join forces for high-quality open source beginner teaching material
+    \item Improved tooling experience for beginners: 
+    \begin{itemize}
+      \item Better \textit{desktop} experience for \textbf{university-level} students: one single-click, signed snap, .msi and .dmg for a Scala bundle (scala in terminal, vs code, intellij scala bundle) available in desktop official app stores for linux, windows and mac
+      \item Better \textit{browser} experience for \textbf{primary school} students: one single click browser client js app with compiler running under Scala.js compiling to local store not needing network connection after download available as signe app in app stores for ChromeOS, IOS, Android
+    \end{itemize}
+  \end{itemize}
+
+\end{Slide}
+
+\EndSlide
+
+
 
 
 \end{document}
