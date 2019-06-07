@@ -232,12 +232,12 @@ First languages for students of the Computer Science and Engineering (CSE) progr
       \end{itemize}   
       
       \pause\vspace{0.5em}=> \textbf{Goals} of introducing Scala first:
-      \begin{itemize}
+      \begin{enumerate}
         %\item Some not so enthusiastic about Java         
-        \item Increase challenge level for high-performers 
         \item Increase learning outcome for all students
-        \item Improve collaboration among students
-      \end{itemize}   
+        \item Increase challenge level for high-performers 
+        \item Increase collaborative learning
+      \end{enumerate}   
       
     \end{minipage}
 \end{Slide}
@@ -379,53 +379,13 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 
 \end{Slide}
 
-\begin{Slide}{Teaching benefits of a multi-paradigm language}
-\begin{minipage}{0.2\textwidth}
-  \includegraphics[height=0.52\textheight]{Pictures/marton}\\
-  {\small Marton \& Tsui \newline (2004)}
-\end{minipage}%
-\begin{minipage}{0.85\textwidth}
-  \begin{itemize}
-    \item Learning is the process of being capable of \textit{doing} something
-    \item Learners construct a language by discerning parts and wholes % that are experienced in context   
-    \item Patterns of variation:
-    \begin{itemize}
-      \item \textbf{Contrast}: to experience something, you need to experience something else to compare with    
-      \item \textbf{Generalisation}: to understand a concept you need to be able to abstract from irrelevant features    
-      \item \textbf{Separation}: to experience a certain aspect of something, you need to vary that aspect while other aspects remain fixed    
-      \item \textbf{Fusion}: to be capable of doing something advanced you need to experience several critical aspects at the same time    
-    \end{itemize}
-  \end{itemize}
-\end{minipage}
 
-\vspace{1em} Scala enables contrasting, generalisation, separation and fusion across paradigms.
-
-\end{Slide}
 
 \Section{How did we implement Scala first?}
 
-\begin{Slide}{Pedagogical ideas behind course design}
-  \begin{minipage}{0.3\textwidth}
-    \includegraphics[height=0.6\textheight]{Pictures/brown}\\
-    Brown et al. (2014)
-  \end{minipage}%
-  \begin{minipage}{0.7\textwidth}
-    A great summary of research on effective learning strategies:
-    \begin{itemize}
-      \item How learning occurs: encoding, consolidation, retrieval
-      \item Low-stake self testing to retrieve what you learned and identify missing pieces
-      \item Deliberate practice: spaced out \& interleaved
-      \item Use reflection \& elaboration as you retrieve
-      \item Easier isn't better: embrace desirable difficulties
-      \item How effort helps: reconsolidation, creating mental models, broaden mastery, foster conceptual learning, improve versatility, prime your mind for learning 
-      \item Dismissed myths: errorless learning, learning styles
-    \end{itemize}
-  \end{minipage}
-  
-  \end{Slide}
 
 \begin{Slide}{A typical study week}
-  Resources for 135 students: 1 lecturer (me), 14 teaching assistants (older students), 
+ % Resources for 135 students: 1 lecturer (me), 14 teaching assistants (older students). 
 \begin{table}\centering
   \begin{tabular}{l | l |l l | l}
   Mon & Tue & Wed & Thu & Fri \\ \hline
@@ -433,12 +393,12 @@ First languages for students of the Computer Science and Engineering (CSE) progr
   \end{tabular}
 \end{table}
   \begin{itemize}
-    \item Workshops and labs in school computer rooms with Ubuntu and preinstalled tools. 
+    \item Workshops and labs in desktop computer rooms with Ubuntu \& pre-installed tools. 
     \item Workshops focus on work with \textbf{exercises} on concepts related to a weekly \textbf{theme}. 
     \item 7 workshop time slots (2h) per week in 2 computer rooms in parallell. 
-    \item If there is space left in room you can attend several workshops.
+    %\item If there is space left in room you can attend several workshops.
     \item 2 \textbf{lab} time slots (2h) per week in 6 rooms in parallell. Labs are assessed pass/fail.
-    \item Computer rooms are available to students 24/7 when no teaching is scheduled.
+    %\item Computer rooms are available to students 24/7 when no teaching is scheduled.
     %\item Link to full schedule: \url{http://cs.lth.se/pgk/schema/}
   \end{itemize}
 \end{Slide}  
@@ -486,15 +446,16 @@ First languages for students of the Computer Science and Engineering (CSE) progr
       \end{tabular}  
 
   \end{minipage}%
-    \begin{minipage}{0.32\textwidth}
+    \begin{minipage}{0.31\textwidth}
       \begin{itemize}
-        \item Progression is based on experiences 2016-2018 
-        \item Supported by OSS lecture slides and \textbf{compendium} with weekly assignments (exercises \& labs)
+        %\item Progression is based on experiences 2016-2018 
+        \item Supported by slides and \textbf{compendium} with weekly assignments %(exercises \& labs)
         %\\ https://github.com/lunduniversity/introprog
         \item Simple Scala lib with pixel window, io etc.: {github.com/lunduniversity/\\\textbf{introprog-scalalib}}
+        \item All teaching material is open source
       \end{itemize}
     \end{minipage}%
-    \tikz[overlay]{\node [text width=2.1cm, align=left] at (1,0.5) {\includegraphics[width=1.0\textwidth]{Pictures/compendium}};} 
+    \tikz[overlay]{\node [text width=2.1cm, align=left] at (1,1.2) {\includegraphics[width=1.0\textwidth]{Pictures/compendium}};} 
   \end{Slide}
 
 \begin{Slide}{The first three weeks are playful}
@@ -563,35 +524,39 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 
 \begin{Slide}{Experiences with Scala first -- Benefits}
   My hypotheses supported by my experience since 2011 (but no systematic empiricism):
-  \begin{itemize}
-  \item Easy for beginners and interesting for non-beginners %(depending how you teach...)
+  \begin{enumerate}
+  \item Scala is easy for beginners and interesting for non-beginners %(depending how you teach...)
   \item Regular semantics is easier for beginners; e.g. value types are real objects
-  \item Concise (but not too concise), expressive: do interesting things with small programs
-  \item Powerful, simple-to-use standard library: do interesting things with small programs
-  \item Static typing help finding bugs: the compiler is your friend
-  \item Interactive learning in the Scala REPL: understand expressions step by step
+  \item Ability to do interesting things with small programs is important for beginners
+  \begin{itemize}
+    \item Scala is expressive and concise (but not too concise) 
+    \item Scala has a simple-to-learn and powerful standard library
+  \end{itemize}
+  \item Static typing better for beginner debuggers: the Scala compiler is your friend  
+  \item Beginners understand concepts step by step: iterative learning in the Scala REPL  
   %\item Rich semantics: can demonstrate many computer science concepts
-  \item Modern, evolving language: exciting for students and teachers
+  \item Scala is exciting to students \& teachers: a modern language -- you can grow 
   %\item Free, open source language and tools: no vendor lock-in (cf. .net, Swift)
-  \item Multi-paradigm: excellent for mixing imperative, object-oriented, functional
-  \end{itemize}  
+  \item Multi-paradigm: allows for contrasting important ideas; contrasting helps learning
+  \item Ability to do things in several ways help deeper conceptual knowledge building
+  \end{enumerate}  
 \end{Slide}
+
 
 \begin{Slide}{Experiences with Scala first -- Challenges}
   Things we have struggled with in a trial \& error fashion:
-  \begin{itemize}
+  \begin{enumerate}
   \item Developing \textbf{teaching material} for Scala from scratch that \textbf{fit our context} 
   \item Selecting a \textbf{lagom subset} of Scala
   \item Designing an \textbf{effective progression} with step-wise iteration of concepts combined
   %\item Complete beginners stumble on getting tooling to work on their own machines
   \item Helping beginners to overcome \textbf{tool barriers} (editor, compiler, build tool, IDE)
-  \end{itemize}  
+  \end{enumerate}  
 \end{Slide}
 
 
-
 \begin{Slide}{Key ingredients in our progression for Scala first}
- \begin{itemize}
+ \begin{enumerate}
  \item  Introduce concepts iteratively: first separated, then combined,  use variation patterns  
  \item Initial playful assignments to illustrate programming (e.g. using turtle graphics)
  \item Start with expressions and simple functions in REPL, then small but complete imperative programs compiled in terminal: manifest mental model of execution
@@ -602,19 +567,19 @@ First languages for students of the Computer Science and Engineering (CSE) progr
   \item Inheritance introduced iteratively, start with simple sum type (base trait + case object)
   \item Progression of collections: sequences (Vector, Array), nested sequences, Set, Map 
   \item Power of higher-order functions experienced through the collection library
-\end{itemize}
+\end{enumerate}
 \end{Slide}  
 
 
 \begin{Slide}{Balance and mix object-oriented \& functional}
   Scala's OO+FP mix enables learning by concept awareness and contrasting:
-  \begin{itemize}
+  \begin{enumerate}
     \item Awareness of types of values, expressions, parameters, return types
     \item Contrast mutable state (class with var) -- immutable data (case class)
     \item Contrast inheritance for modelling -- inheritance for reuse
     \item Contrast side-effecting functions -- referentially transparent functions
     \item Contrast inheritance -- composition -- state-less modules of functions
-  \end{itemize}
+  \end{enumerate}
 \end{Slide}  
 
 
@@ -630,6 +595,48 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 \vfill \url{https://www.signifytechnology.com/blog/2018/06/supporting-scala-adoption-in-colleges-by-mark-lewis}
 \end{Slide}
 
+\begin{Slide}{Scala: A better deal for beginner programmers?}
+  \begin{itemize}
+    \item Scala 3 for beginners: opportunity to show-case idioms for \textit{the \textbf{simple} parts}
+    %\item Spreading the news of Scala turning main-stream 
+    \item Join forces for high-quality open source \textbf{beginner teaching material}
+    \item A beginner-friendly library for \textbf{analyzing data} in .csv (as easy as MatLab, numPy, R)
+    \item Improve official \textbf{scripting} model (cf. ammonite: scripts calling scripts, ivy import)
+    \item Better \textbf{tooling UX} for beginners: 
+    \begin{itemize}
+      \item Better \textit{desktop} coding experience for \textbf{university} students: one single-click install of signed snap \& .msi \& .dmg  complete Scala bundle (REPL in terminal, vs code, intellij scala bundle) available in desktop official app stores for linux, windows and mac
+      \item Better \textit{browser} coding experience for \textbf{primary school} students: single click browser client js app with compiler running under Scala.js compiling to local store not needing network connection after download available as signed app in app stores for ChromeOS, IOS, Android
+    \end{itemize}
+  \end{itemize}
+
+\end{Slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[plain]
+  \begin{figure}
+  \centering
+  \begin{tikzpicture}[overlay] 
+  \node [] at (0.0mm,-15.0mm) {%
+    \includegraphics[height=1.2\paperheight]{Pictures/kids-programming}%
+  };
+  \end{tikzpicture}%
+  \end{figure}%
+  \tikz[overlay]{
+    \node [] at (0.5\paperwidth,0.0cm) {\includegraphics[height=5cm]{Pictures/scala}};
+  }
+
+  \tikz[overlay]{
+    \node [] at (0.45\paperwidth,-3.5cm) {\color{white!40}{\fontsize{16}{16}\selectfont\bf Focus: Next Gen Scala Devs}};
+  }
+
+\end{frame}%
+
+
+\EndSlide
+
+%Slides that didn't make due to time limit
+
 \begin{Slide}{Why not Python first?}
   My hypotheses based on some experience (but no systematic empiricism):
 \begin{itemize}
@@ -644,23 +651,50 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 \end{itemize}  
 \end{Slide}
 
-\begin{Slide}{A better Scala deal for beginner teachers}
-  \begin{itemize}
-    \item Scala 3 for beginners: opportunity to show-case idioms for ''the \textbf{simple} parts''
-    %\item Spreading the news of Scala turning main-stream 
-    \item Join forces for high-quality open source \textbf{beginner} teaching material
-    \item Better tooling experience for beginners: 
+
+\begin{Slide}{Teaching benefits of a multi-paradigm language}
+  \begin{minipage}{0.2\textwidth}
+    \includegraphics[height=0.52\textheight]{Pictures/marton}\\
+    {\small Marton \& Tsui \newline (2004)}
+  \end{minipage}%
+  \begin{minipage}{0.85\textwidth}
     \begin{itemize}
-      \item Better \textit{desktop} coding experience for \textbf{university} students: one single-click install of signed snap \& .msi \& .dmg  complete Scala bundle (scala in terminal, vs code, intellij scala bundle) available in desktop official app stores for linux, windows and mac
-      \item Better \textit{browser} coding experience for \textbf{primary school} students: one single click browser client js app with compiler running under Scala.js compiling to local store not needing network connection after download available as signed app in app stores for ChromeOS, IOS, Android
+      \item Learning is the process of being capable of \textit{doing} something
+      \item Learners construct a language by discerning parts and wholes % that are experienced in context   
+      \item Patterns of variation:
+      \begin{itemize}
+        \item \textbf{Contrast}: to experience something, you need to experience something else to compare with    
+        \item \textbf{Generalisation}: to understand a concept you need to be able to abstract from irrelevant features    
+        \item \textbf{Separation}: to experience a certain aspect of something, you need to vary that aspect while other aspects remain fixed    
+        \item \textbf{Fusion}: to be capable of doing something advanced you need to experience several critical aspects at the same time    
+      \end{itemize}
     \end{itemize}
-  \end{itemize}
-
-\end{Slide}
-
+  \end{minipage}
+  
+  \vspace{1em} Scala enables contrasting, generalisation, separation and fusion across paradigms.
+  
+  \end{Slide}
+  
+  \begin{Slide}{Pedagogical ideas behind course design}
+    \begin{minipage}{0.3\textwidth}
+      \includegraphics[height=0.6\textheight]{Pictures/brown}\\
+      Brown et al. (2014)
+    \end{minipage}%
+    \begin{minipage}{0.7\textwidth}
+      A great summary of research on effective learning strategies:
+      \begin{itemize}
+        \item How learning occurs: encoding, consolidation, retrieval
+        \item Low-stake self testing to retrieve what you learned and identify missing pieces
+        \item Deliberate practice: spaced out \& interleaved
+        \item Use reflection \& elaboration as you retrieve
+        \item Easier isn't better: embrace desirable difficulties
+        \item How effort helps: reconsolidation, creating mental models, broaden mastery, foster conceptual learning, improve versatility, prime your mind for learning 
+        \item Dismissed myths: errorless learning, learning styles
+      \end{itemize}
+    \end{minipage}
+    \end{Slide}
+  
 \EndSlide
-
-
 
 
 \end{document}
