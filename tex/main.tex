@@ -236,7 +236,7 @@ First languages for students of the Computer Science and Engineering (CSE) progr
         %\item Some not so enthusiastic about Java         
         \item Increase learning outcome for all students
         \item Increase challenge level for high-performers 
-        \item Increase collaborative learning
+        %\item Increase collaborative learning
       \end{enumerate}   
       
     \end{minipage}
@@ -383,6 +383,32 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 
 \Section{How did we implement Scala first?}
 
+\begin{Slide}{Pedadogical ideas behind course design}
+
+  \begin{minipage}{0.22\textwidth}
+    \includegraphics[height=0.52\textheight]{Pictures/marton}\\
+    {\small Marton \& Tsui (2004)}
+  \end{minipage}%
+  \begin{minipage}{0.3\textwidth}
+      Patterns of variation:
+      \begin{itemize}
+        \item contrast
+        \item generalize
+        \item separate
+        \item fuse
+      \end{itemize}
+  \end{minipage}%
+  \begin{minipage}{0.22\textwidth}
+      \includegraphics[height=0.52\textheight]{Pictures/brown}\\
+      {\small Brown et al. (2014)}
+    \end{minipage}%
+    \begin{minipage}{0.25\textwidth}
+        Easier isn't better: \\        
+        embrace desirable\\difficulties!
+    \end{minipage}
+\end{Slide}
+
+
 
 \begin{Slide}{A typical study week}
  % Resources for 135 students: 1 lecturer (me), 14 teaching assistants (older students). 
@@ -393,7 +419,7 @@ First languages for students of the Computer Science and Engineering (CSE) progr
   \end{tabular}
 \end{table}
   \begin{itemize}
-    \item Workshops and labs in desktop computer rooms with Ubuntu \& pre-installed tools. 
+    \item Workshops and labs in computer rooms with Ubuntu \& pre-installed Scala tools 
     \item Workshops focus on work with \textbf{exercises} on concepts related to a weekly \textbf{theme}. 
     \item 7 workshop time slots (2h) per week in 2 computer rooms in parallell. 
     %\item If there is space left in room you can attend several workshops.
@@ -404,7 +430,7 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 \end{Slide}  
 
 \begin{Slide}{Progression of main themes}
-  \begin{minipage}{0.54\textwidth}
+  \begin{minipage}{0.55\textwidth}
     \fontsize{8.7}{10}\selectfont
     % \begin{tabular}{|l|l|l|}
     %   \textit{Week} & \textit{Main Theme} & \textit{Lab} \\ \hline \hline
@@ -447,15 +473,16 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 
   \end{minipage}%
     \begin{minipage}{0.31\textwidth}
+      {\hspace{0.5em} Teaching material:}
       \begin{itemize}
         %\item Progression is based on experiences 2016-2018 
-        \item Supported by slides and \textbf{compendium} with weekly assignments %(exercises \& labs)
+        \item Lecture slides and \textbf{compendium} with weekly assignments %(exercises \& labs)
         %\\ https://github.com/lunduniversity/introprog
         \item Simple Scala lib with pixel window, io etc.: {github.com/lunduniversity/\\\textbf{introprog-scalalib}}
-        \item All teaching material is open source
+        \item All teaching material is open source CC-BY-SA
       \end{itemize}
     \end{minipage}%
-    \tikz[overlay]{\node [text width=2.1cm, align=left] at (1,1.2) {\includegraphics[width=1.0\textwidth]{Pictures/compendium}};} 
+    \tikz[overlay]{\node [text width=2.1cm, align=left] at (1,1.5) {\includegraphics[width=1.0\textwidth]{Pictures/compendium}};} 
   \end{Slide}
 
 \begin{Slide}{The first three weeks are playful}
@@ -478,13 +505,13 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 
 \begin{Slide}{A first understanding of basic concepts (SARA)}
 \begin{minipage}{0.6\textwidth}
-\includegraphics[width=0.9\textwidth]{Pictures/kojo}  
+\includegraphics[width=0.9\textwidth]{Pictures/kojo-en}  
 \end{minipage}%
 \begin{minipage}{0.4\textwidth}
  \includegraphics[width=0.15\textwidth]{Pictures/square}%
  \includegraphics[width=0.25\textwidth]{Pictures/square-column}%
  \includegraphics[width=0.5\textwidth]{Pictures/square-grid}  \\
- \vfill\footnotesize{http://www.kogics.net/kojo}
+ \vfill{http://www.kogics.net/kojo}
 \end{minipage}%
 \end{Slide}  
   
@@ -572,7 +599,7 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 
 
 \begin{Slide}{Balance and mix object-oriented \& functional}
-  Scala's OO+FP mix enables learning by concept awareness and contrasting:
+  Scala's OO+FP mix enables learning by concept awareness and patterns of variation:
   \begin{enumerate}
     \item Awareness of types of values, expressions, parameters, return types
     \item Contrast mutable state (class with var) -- immutable data (case class)
@@ -618,16 +645,16 @@ First languages for students of the Computer Science and Engineering (CSE) progr
   \centering
   \begin{tikzpicture}[overlay] 
   \node [] at (0.0mm,-15.0mm) {%
-    \includegraphics[height=1.2\paperheight]{Pictures/kids-programming}%
+    \includegraphics[height=1.2\paperheight]{Pictures/kids-programming.JPG}%
   };
   \end{tikzpicture}%
   \end{figure}%
-  \tikz[overlay]{
-    \node [] at (0.5\paperwidth,0.0cm) {\includegraphics[height=5cm]{Pictures/scala}};
-  }
+  % \tikz[overlay]{
+  %   \node [] at (0.5\paperwidth,0.0cm) {\includegraphics[height=5cm]{Pictures/scala}};
+  % }
 
   \tikz[overlay]{
-    \node [] at (0.45\paperwidth,-3.5cm) {\color{white!40}{\fontsize{16}{16}\selectfont\bf Focus: Next Gen Scala Devs}};
+    \node [] at (0.45\paperwidth,-3.5cm) {\color{white!40}{\fontsize{16}{16}\selectfont\bf Next Gen Devs}};
   }
 
 \end{frame}%
