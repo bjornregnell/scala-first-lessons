@@ -611,15 +611,15 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 \begin{Slide}{Key ingredients in our progression for Scala first}
  \begin{enumerate}
  \item  Introduce concepts iteratively: first separated, then combined,  use variation patterns  
- \item Initial playful assignments to illustrate programming (e.g. using turtle graphics)
+ \item Initial playful assignments to illustrate abstraction (e.g. using turtle graphics)
  \item Start with expressions and simple functions in REPL, then small but complete imperative programs compiled in terminal: manifest mental model of execution
   \item Objects are introduced as modules to create name space
   \item Classes are introduced to enable multiple instances
-  \item Case classes introduced together with general classes: \\
-   contrast immutable and mutable state; use patterns to deconstruct data
-  \item Inheritance introduced iteratively, start with simple sum type (base trait + case object)
+  \item Case classes introduced together with ordinary classes to model data: \\
+   contrast immutable product type and mutable state; use patterns to deconstruct
   \item Progression of collections: sequences (Vector, Array), nested sequences, Set, Map 
   \item Power of higher-order functions experienced through the collection library
+  \item Inheritance introduced iteratively, start with simple sum type (trait + case objects)
 \end{enumerate}
 \end{Slide}  
 
@@ -627,7 +627,7 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 \begin{Slide}{How did we mix OO and FP in our teaching?}
   Scala's OO+FP mix enables learning by concept awareness and patterns of variation:
   \begin{enumerate}
-    \item Awareness of types of values, expressions, parameters, return types
+    \item Awareness of types of values, expressions, function parameters \& return types
     \item Contrast mutable state (class with var) -- immutable data (case class)
     \item Contrast inheritance for modelling -- inheritance for reuse
     \item Contrast side-effecting functions -- referentially transparent functions
@@ -641,9 +641,9 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 \begin{Slide}{The future of Scala at Lund University}
 \begin{itemize}
   \item CSE students strongly support Scala first; course evaluations are excellent
-  \item There is a great interest among CSE students to continue with Scala in later courses; this depends on if more cs teachers want to learn and try out Scala 
-  \item Hopefully more IT programs that currently have Java first are attracted to the new pedagogical concept of the CSE course
-  \item On-going debate of pros and cons of Scala first versus Python first for non-IT programs, e.g. chemistry, physics, civil engineering etc.
+  \item There is a great interest among CSE students to continue with Scala in later courses; this depends on if more teachers want to learn and teach Scala 
+  \item Hopefully more IT programs that currently have Java first are attracted to the new pedagogical concept of our CSE course
+  \item On-going debate of pros and cons of Scala first versus Python first for non-IT engineering programs, e.g. chemistry, physics, civil engineering etc.
 \end{itemize}  
 \vfill \url{https://www.signifytechnology.com/blog/2018/06/supporting-scala-adoption-in-colleges-by-mark-lewis}
 \end{Slide}
@@ -653,7 +653,7 @@ First languages for students of the Computer Science and Engineering (CSE) progr
     \item Scala 3 for beginners: opportunity to show-case idioms for \textit{the \textbf{simple} parts}
     %\item Spreading the news of Scala turning main-stream 
     \item Join forces for high-quality open source \textbf{beginner teaching material}
-    \item A beginner-friendly library for \textbf{analyzing data} in .csv (as easy as MatLab, numPy, R)
+    \item A beginner-friendly library for \textbf{analyzing data} (as simple as MatLab, numPy, R)
     \item Improve official \textbf{scripting} model (cf. ammonite: scripts calling scripts, ivy import)
     \item Better \textbf{tooling UX} for beginners: 
     \begin{itemize}
@@ -680,7 +680,7 @@ First languages for students of the Computer Science and Engineering (CSE) progr
   % }
 
   \tikz[overlay]{
-    \node [] at (0.45\paperwidth,-3.5cm) {\color{white!40}{\fontsize{16}{16}\selectfont\bf Next Gen Devs}};
+    \node [] at (0.45\paperwidth,-3.5cm) {\color{white!40}{\fontsize{24}{16}\selectfont\bf Next Gen Devs}};
   }
 
 \end{frame}%
@@ -693,7 +693,7 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 \begin{Slide}{Why not Python first?}
   My hypotheses based on some experience (but no systematic empiricism):
 \begin{itemize}
-  \item Dynamic typing means less help in finding bugs
+  \item Dynamic typing means less help in finding bugs; risk of lower ambition
   \item No ''typing dialog'' with a compiler means less conceptual learning
   \item Non-explicit types in function defs is less efficient when learning abstract thinking
   \item Indentation syntax with silent begin-end makes nested blocks obscure to beginners
