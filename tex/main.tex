@@ -32,7 +32,7 @@
 \title[Scala First Lessons]{Scala First: \vspace{0.25em}\newline \fontsize{16}{25}\selectfont Lessons from 3 student generations }
 \author[cs.lth.se/bjorn-regnell]{%
   Bjorn Regnell\newline
-  Dept.\@ of Computer Science, Lund University}
+  Dept.\@ of Computer Science, Lund University, Sweden}
 %%%%%%%%%%%%%%%%%%%%%
 \usepackage{verbatim}
 %%%%%%%%%%%%% Verbatim code box
@@ -230,15 +230,6 @@ First languages for students of the Computer Science and Engineering (CSE) progr
         \item High-performing students not challenged
         \item Poor results in second course
       \end{itemize}   
-      
-      \pause\vspace{0.5em}=> \textbf{Goals} of introducing Scala first:
-      \begin{enumerate}
-        %\item Some not so enthusiastic about Java         
-        \item Increase learning outcome for all students
-        \item Increase challenge level for high-performers 
-        %\item Increase collaborative learning
-      \end{enumerate}   
-      
     \end{minipage}
 \end{Slide}
 
@@ -343,6 +334,15 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 \end{frame}
 }
 
+% \begin{Slide}{Our main goals of introducing Scala first}
+%   \Large
+%   \begin{enumerate}
+%     \item Increase learning outcome for all students
+%     \item Increase challenge level for high-performers 
+%     %\item Increase collaborative learning
+%   \end{enumerate}   
+% \end{Slide}
+
 \begin{Slide}{Scala first -- a big success! \texttt{~:)}}
 \begin{itemize}
   \item Exam results in second course much better: increased learning outcome
@@ -420,7 +420,7 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 \end{table}
   \begin{itemize}
     \item Workshops and labs in computer rooms with Ubuntu \& pre-installed Scala tools 
-    \item Workshops focus on work with \textbf{exercises} on concepts related to a weekly \textbf{theme}. 
+    \item Workshops focus on work with \textbf{exercises} on concepts related to weekly \textbf{theme}. 
     \item 7 workshop time slots (2h) per week in 2 computer rooms in parallell. 
     %\item If there is space left in room you can attend several workshops.
     \item 2 \textbf{lab} time slots (2h) per week in 6 rooms in parallell. Labs are assessed pass/fail.
@@ -429,7 +429,7 @@ First languages for students of the Computer Science and Engineering (CSE) progr
   \end{itemize}
 \end{Slide}  
 
-\begin{Slide}{Progression of main themes}
+\begin{Slide}{How did we design contents \& progression?}
   \begin{minipage}{0.55\textwidth}
     \fontsize{8.7}{10}\selectfont
     % \begin{tabular}{|l|l|l|}
@@ -479,25 +479,45 @@ First languages for students of the Computer Science and Engineering (CSE) progr
         \item Lecture slides and \textbf{compendium} with weekly assignments %(exercises \& labs)
         %\\ https://github.com/lunduniversity/introprog
         \item Simple Scala lib with pixel window, io etc.: {github.com/lunduniversity/\\\textbf{introprog-scalalib}}
-        \item All teaching material is open source CC-BY-SA
+        \item All material is open source {\footnotesize CC-BY-SA} developed  together with senior students
       \end{itemize}
     \end{minipage}%
-    \tikz[overlay]{\node [text width=2.1cm, align=left] at (1,1.5) {\includegraphics[width=1.0\textwidth]{Pictures/compendium}};} 
+    \tikz[overlay]{\node [text width=2.1cm, align=left] at (1,1.65) {\includegraphics[width=1.0\textwidth]{Pictures/compendium}};} 
   \end{Slide}
+
+\begin{Slide}{How did we deal with a very broad spectrum of pre-knowledge?}
+  The challenge level in assignements are variable: 
+  \begin{itemize}
+    \item All exercises have three parts 
+    \begin{itemize}
+      \item Foundation task: exercise the concepts of this week 
+      \item Extra tasks: variations, if you need more training
+      \item Advanced tasks: go deeper and beyond
+    \end{itemize}
+    \item All labs have two parts:   
+    \begin{itemize}
+      \item Mandatory task: makes your program work 
+      \item Elective tasks: add interesting features to your program 
+    \end{itemize}  
+  \end{itemize}
+\end{Slide}
 
 \begin{Slide}{The first three weeks are playful}
   
   \begin{itemize}
+    \item Computing course in parallel: intro to Linux terminal on school computers (Ubuntu)
     \item Student's traditional freshman games and festivities in parallell
-    \item Computing course in parallel with intro to terminal on school computers (Ubuntu)
+    \item []
     \item \textbf{Week 1}: Intro to basics using expressions in REPL and turtle graphics in Kojo; \textbf{S}equencing, \textbf{A}lternative, \textbf{R}epetition, \textbf{A}bstraction (SARA)%: \url{http://www.kogics.net/kojo-download}: \\ Working with expressions in REPL and control flow principles (SARA) in Kojo: 
     \begin{minipage}{0.3\textwidth}
       
     \end{minipage} 
  
-    \item \textbf{Week 2}: Small readln println programs using editor (VS Code + Metals)\\ Compile in terminal with \code|scalac|, run with \code|scala|
+    \item \textbf{Week 2}: Small readln println programs using editor (VS Code + Metals).\\ Compile in terminal with \code|scalac|, run with \code|scala|
       
-    \item \textbf{Week 3}: Create a \textit{lagom} irritating terminal text game at your challenge level \\ Compile \& run with \code|sbt ~run| , you should divide your code into several functions   
+    \item \textbf{Week 3}: Create a \textit{lagom} irritating terminal text game at your challenge level, focus on readability of your code.\\ 
+      
+      Compile \& run with \code|sbt ~run| , you should divide your code into several functions.   
   \end{itemize}
 \footnotesize{https://en.wikipedia.org/wiki/\textbf{Lagom} \\ Swedish for ''\textbf{just right}'', carries the connotation of appropriateness, although not necessarily perfection}
 \end{Slide}  
@@ -552,17 +572,18 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 \begin{Slide}{Experiences with Scala first -- Benefits}
   My hypotheses supported by my experience since 2011 (but no systematic empiricism):
   \begin{enumerate}
-  \item Scala is easy for beginners and interesting for non-beginners %(depending how you teach...)
+  \item Scala can be simple enough for beginners \textit{and} interesting for non-beginners %(depending how you teach...)
+  \item Scala is exciting to both students \& teachers: a modern language -- you can grow 
   \item Regular semantics is easier for beginners; e.g. value types are real objects
   \item Ability to do interesting things with small programs is important for beginners
   \begin{itemize}
     \item Scala is expressive and concise (but not too concise) 
-    \item Scala has a simple-to-learn and powerful standard library
+    \item Scala has a simple-to-learn, powerful, regular, simple-to-use standard library
   \end{itemize}
   \item Static typing better for beginner debuggers: the Scala compiler is your friend  
   \item Beginners understand concepts step by step: iterative learning in the Scala REPL  
   %\item Rich semantics: can demonstrate many computer science concepts
-  \item Scala is exciting to students \& teachers: a modern language -- you can grow 
+
   %\item Free, open source language and tools: no vendor lock-in (cf. .net, Swift)
   \item Multi-paradigm: allows for contrasting important ideas; contrasting helps learning
   \item Ability to do things in several ways help deeper conceptual knowledge building
@@ -573,8 +594,13 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 \begin{Slide}{Experiences with Scala first -- Challenges}
   Things we have struggled with in a trial \& error fashion:
   \begin{enumerate}
-  \item Developing \textbf{teaching material} for Scala from scratch that \textbf{fit our context} 
-  \item Selecting a \textbf{lagom subset} of Scala
+  \item Developing \textbf{teaching material} for Scala from scratch that \textbf{fit our context} \\ {\footnotesize Our CSE students seem less enthusiastic about learning from text books...}
+  
+  \item Selecting a \textbf{lagom subset} of Scala 
+  \begin{itemize}
+    \item pitfalls: including to many concepts; in-coherent progression 
+    \item examples of what we excluded: \\creating type classes, recursive data types, recursive algorithms 
+   \end{itemize}  
   \item Designing an \textbf{effective progression} with step-wise iteration of concepts combined
   %\item Complete beginners stumble on getting tooling to work on their own machines
   \item Helping beginners to overcome \textbf{tool barriers} (editor, compiler, build tool, IDE)
@@ -598,7 +624,7 @@ First languages for students of the Computer Science and Engineering (CSE) progr
 \end{Slide}  
 
 
-\begin{Slide}{Balance and mix object-oriented \& functional}
+\begin{Slide}{How did we mix OO and FP in our teaching?}
   Scala's OO+FP mix enables learning by concept awareness and patterns of variation:
   \begin{enumerate}
     \item Awareness of types of values, expressions, parameters, return types
