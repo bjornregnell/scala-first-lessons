@@ -5,4 +5,6 @@ Download Slides: https://github.com/bjornregnell/scala-first-lessons/releases/do
 
 Watch video: https://www.youtube.com/watch?v=ii_sC1TfpZY
 
+Download video: https://fileadmin.cs.lth.se/pgk/scala-first-lessons.mp4
+
 Read blog post: https://blog.scaladays.org/2019/04/28/bjorn-regnell-at-scala-days-we-need-more-university-teachers-choosing-scala-first/
